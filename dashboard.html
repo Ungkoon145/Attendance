@@ -3,62 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - โรงเรียนเตรียมอุดมศึกษา</title>
+  <title>Dashboard - เช็คชื่อนักเรียนและตารางสอน</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>ระบบเช็คชื่อของนักเรียน</h1>
+    <h1>ระบบเช็คชื่อและตารางสอน</h1>
     <h2>โรงเรียนเตรียมอุดมศึกษา</h2>
   </header>
 
   <main>
-    <div class="container">
-      <h3>ยินดีต้อนรับ, นักเรียน</h3>
-      
-      <!-- ตารางเรียน -->
-      <h4>ตารางเรียนวันนี้:</h4>
-      <table>
+    <!-- ตารางรายชื่อนักเรียน -->
+    <section>
+      <h3>รายชื่อนักเรียน</h3>
+      <table id="studentTable">
         <thead>
           <tr>
-            <th>วิชา</th>
-            <th>เวลา</th>
-            <th>ห้องเรียน</th>
+            <th>ลำดับ</th>
+            <th>ชื่อ</th>
+            <th>สถานะการเช็คชื่อ</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>คณิตศาสตร์</td>
-            <td>08:00 - 09:30</td>
-            <td>ห้อง 101</td>
-          </tr>
-          <tr>
-            <td>ภาษาอังกฤษ</td>
-            <td>10:00 - 11:30</td>
-            <td>ห้อง 102</td>
-          </tr>
-          <tr>
-            <td>วิทยาศาสตร์</td>
-            <td>12:00 - 13:30</td>
-            <td>ห้อง 103</td>
-          </tr>
+          <!-- รายชื่อนักเรียนจะถูกแสดงที่นี่ -->
         </tbody>
       </table>
+    </section>
 
-      <!-- ฟอร์มเช็คชื่อ -->
-      <h4>เช็คชื่อวันนี้:</h4>
-      <form id="attendanceForm">
-        <label for="attendanceStatus">เลือกสถานะการมาถึง:</label>
-        <select id="attendanceStatus" name="attendanceStatus">
-          <option value="present">มาที่เรียน</option>
-          <option value="absent">ขาดเรียน</option>
-        </select>
-        <button type="submit">บันทึกการเช็คชื่อ</button>
-      </form>
+    <!-- ตารางสอน -->
+    <section>
+      <h3>ตารางสอน</h3>
+      <label for="daySelect">เลือกวัน:</label>
+      <select id="daySelect">
+        <option value="monday">จันทร์</option>
+        <option value="tuesday">อังคาร</option>
+        <option value="wednesday">พุธ</option>
+        <option value="thursday">พฤหัสบดี</option>
+        <option value="friday">ศุกร์</option>
+      </select>
+      <table id="scheduleTable">
+        <thead>
+          <tr>
+            <th>เวลา</th>
+            <th>วิชา</th>
+            <th>ห้อง</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ตารางเรียนจะถูกแสดงที่นี่ -->
+        </tbody>
+      </table>
+    </section>
 
-      <!-- ปุ่มออกจากระบบ -->
-      <button id="logoutButton">ออกจากระบบ</button>
-    </div>
+    <!-- ปุ่มออกจากระบบ -->
+    <button id="logoutButton">ออกจากระบบ</button>
   </main>
 
   <footer>
