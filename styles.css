@@ -1,33 +1,34 @@
-/* ส่วนของ header */
-header {
-  background-color: #2196F3; /* สีฟ้าธีมเตรียมอุดม */
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: relative; /* ป้องกันการทับซ้อน */
-  z-index: 1;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
+/* styles.css */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4;
 }
 
-main {
+header {
+  background-color: #FF99CC;
+  color: white;
+  text-align: center;
   padding: 20px;
-  margin-top: 10px;
 }
 
-section {
-  margin-bottom: 30px;
+h1, h2 {
+  margin: 0;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 table, th, td {
@@ -39,25 +40,20 @@ th, td {
   text-align: left;
 }
 
-th {
-  background-color: #FF99CC;
-}
-
-#logoutButton {
-  display: block;
-  margin: 20px auto;
+button {
   padding: 10px 20px;
   background-color: #FF99CC;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
-  z-index: 2; /* ปรับให้สูงกว่า header */
+  margin-top: 20px;
 }
 
-#logoutButton:hover {
+button:hover {
   background-color: #FF99CC;
 }
 
-  
+select {
+  padding: 10px;
+  margin-top: 10px;
+}
